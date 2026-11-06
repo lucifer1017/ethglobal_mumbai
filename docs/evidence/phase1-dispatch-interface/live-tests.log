@@ -1,0 +1,16 @@
+
+> check:migration-runner
+> node scripts/check-migration-runner.mjs
+
+
+> meter-backend@0.1.0 test
+> vitest run
+
+
+ RUN  v5.1.0 <checkout>/backend
+
+
+ Test Files  7 passed (7)
+      Tests  74 passed (74)
+   Start at  03:58:26
+   Duration  2.66s (tests 49%, import 49%, transform 2%)

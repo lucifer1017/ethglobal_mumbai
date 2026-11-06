@@ -75,3 +75,12 @@ size. Offline tests use a local server; an exact `EGRESS_DEV_ALLOW` origin is
 accepted only outside production. Run `METER_EGRESS_LIVE_TEST=1 npm run check:migration-runner` to include the optional
 public HTTPS test. Registration
 and paid invocation consumers will be integrated separately.
+
+## Dispatch envelope interface
+
+[The dispatch envelope v1 contract](docs/interfaces/dispatch-envelope.md) defines
+canonical parameter/body hashes and raw-digest EIP-191 signatures. Six shared
+synthetic vectors have a reference test. Regenerate them with
+`node scripts/generate-dispatch-vectors.mjs` after installing backend dependencies.
+This interface does not implement payment verification, durable replay protection
+or a production signer.

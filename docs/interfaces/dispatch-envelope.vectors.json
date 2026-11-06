@@ -1,0 +1,157 @@
+{
+  "description": "Synthetic interface fixtures, no receipt/payment/replay verification",
+  "now": 1800000000,
+  "expectedSigner": "0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf",
+  "vectors": [
+    {
+      "name": "valid",
+      "body": {
+        "v": 1,
+        "chainId": 1874,
+        "kind": "invoke",
+        "requestId": "synthetic-request-1",
+        "paymentId": "0x4444444444444444444444444444444444444444444444444444444444444444",
+        "txHash": "0x5555555555555555555555555555555555555555555555555555555555555555",
+        "params": {
+          "wallet_address": "0x3333333333333333333333333333333333333333",
+          "options": {
+            "tokens": [
+              "USDT"
+            ],
+            "include_zero": false
+          }
+        },
+        "paramsHash": "0xb53eebcd6651a9c9ad3c9fa9b10580f498f054c89f0e4b519da032bbe5a2abdd",
+        "issuedAt": 1799999990,
+        "expiresAt": 1800000050
+      },
+      "signature": "0x3255e4457118413e91d3985ed8812174da8a2bae28aabe814ba00ffdc6981e20686c198502f9f1d0f376c11e5f3ef4fc5c2524ce383378fc27ab268cdb9ef42f1b",
+      "expectedValid": true
+    },
+    {
+      "name": "canonical-key-order",
+      "body": {
+        "v": 1,
+        "chainId": 1874,
+        "kind": "invoke",
+        "requestId": "synthetic-request-1",
+        "paymentId": "0x4444444444444444444444444444444444444444444444444444444444444444",
+        "txHash": "0x5555555555555555555555555555555555555555555555555555555555555555",
+        "params": {
+          "options": {
+            "include_zero": false,
+            "tokens": [
+              "USDT"
+            ]
+          },
+          "wallet_address": "0x3333333333333333333333333333333333333333"
+        },
+        "paramsHash": "0xb53eebcd6651a9c9ad3c9fa9b10580f498f054c89f0e4b519da032bbe5a2abdd",
+        "issuedAt": 1799999990,
+        "expiresAt": 1800000050
+      },
+      "signature": "0x3255e4457118413e91d3985ed8812174da8a2bae28aabe814ba00ffdc6981e20686c198502f9f1d0f376c11e5f3ef4fc5c2524ce383378fc27ab268cdb9ef42f1b",
+      "expectedValid": true
+    },
+    {
+      "name": "expired",
+      "body": {
+        "v": 1,
+        "chainId": 1874,
+        "kind": "invoke",
+        "requestId": "synthetic-request-1",
+        "paymentId": "0x4444444444444444444444444444444444444444444444444444444444444444",
+        "txHash": "0x5555555555555555555555555555555555555555555555555555555555555555",
+        "params": {
+          "wallet_address": "0x3333333333333333333333333333333333333333",
+          "options": {
+            "tokens": [
+              "USDT"
+            ],
+            "include_zero": false
+          }
+        },
+        "paramsHash": "0xb53eebcd6651a9c9ad3c9fa9b10580f498f054c89f0e4b519da032bbe5a2abdd",
+        "issuedAt": 1799999939,
+        "expiresAt": 1799999999
+      },
+      "signature": "0x8826dcd639069001caddc00e79a752093619557bac16e81ab521af350dd121a152f25f4767f13554820d592e054846c5488c27f8862f0c6afabc3f895e9ffe6e1b",
+      "expectedValid": false
+    },
+    {
+      "name": "wrong-signer",
+      "body": {
+        "v": 1,
+        "chainId": 1874,
+        "kind": "invoke",
+        "requestId": "synthetic-request-1",
+        "paymentId": "0x4444444444444444444444444444444444444444444444444444444444444444",
+        "txHash": "0x5555555555555555555555555555555555555555555555555555555555555555",
+        "params": {
+          "wallet_address": "0x3333333333333333333333333333333333333333",
+          "options": {
+            "tokens": [
+              "USDT"
+            ],
+            "include_zero": false
+          }
+        },
+        "paramsHash": "0xb53eebcd6651a9c9ad3c9fa9b10580f498f054c89f0e4b519da032bbe5a2abdd",
+        "issuedAt": 1799999990,
+        "expiresAt": 1800000050
+      },
+      "signature": "0xe7ce7cde4233c734fced8f8e8363e061d6b84873c29e9c63f250a6b6235315b04f4a6eb3257606a49e297e8e9faa097c810d12caca96841b10f1446c9c4eef2e1b",
+      "expectedValid": false
+    },
+    {
+      "name": "tampered-params",
+      "body": {
+        "v": 1,
+        "chainId": 1874,
+        "kind": "invoke",
+        "requestId": "synthetic-request-1",
+        "paymentId": "0x4444444444444444444444444444444444444444444444444444444444444444",
+        "txHash": "0x5555555555555555555555555555555555555555555555555555555555555555",
+        "params": {
+          "wallet_address": "0x6666666666666666666666666666666666666666",
+          "options": {
+            "tokens": [
+              "USDT"
+            ],
+            "include_zero": false
+          }
+        },
+        "paramsHash": "0xb53eebcd6651a9c9ad3c9fa9b10580f498f054c89f0e4b519da032bbe5a2abdd",
+        "issuedAt": 1799999990,
+        "expiresAt": 1800000050
+      },
+      "signature": "0x3255e4457118413e91d3985ed8812174da8a2bae28aabe814ba00ffdc6981e20686c198502f9f1d0f376c11e5f3ef4fc5c2524ce383378fc27ab268cdb9ef42f1b",
+      "expectedValid": false
+    },
+    {
+      "name": "wrong-paramsHash",
+      "body": {
+        "v": 1,
+        "chainId": 1874,
+        "kind": "invoke",
+        "requestId": "synthetic-request-1",
+        "paymentId": "0x4444444444444444444444444444444444444444444444444444444444444444",
+        "txHash": "0x5555555555555555555555555555555555555555555555555555555555555555",
+        "params": {
+          "wallet_address": "0x3333333333333333333333333333333333333333",
+          "options": {
+            "tokens": [
+              "USDT"
+            ],
+            "include_zero": false
+          }
+        },
+        "paramsHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "issuedAt": 1799999990,
+        "expiresAt": 1800000050
+      },
+      "signature": "0x2c8cbffdd87491f3db5bfc1a2fbc782636ac2ca213be1e5fa35b843e3fcdaf5870dfcf820309e69073f978652066d4cbc58a9e00261082496d26356d1da30aac1c",
+      "expectedValid": false
+    }
+  ]
+}

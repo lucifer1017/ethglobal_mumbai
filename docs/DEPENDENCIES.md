@@ -66,3 +66,11 @@ The standalone IP-pinned HTTP helper adds `undici ^8.12.4` and `ipaddr.js ^2.5.0
 Node 24 satisfies undici's runtime requirement. Existing versions stay unchanged.
 Tests mock DNS and use a local HTTP fixture; public HTTPS is an explicit opt-in
 check. No API, creator, paid invocation or x402 consumer is introduced here.
+
+## Phase 1 dispatch interface
+
+The synthetic dispatch vector generator and reference test add only
+`canonicalize ^5.1.0` for RFC 8785 JSON canonicalization; hashing, signing and
+recovery use the already selected viem. Node 24 satisfies its runtime requirement.
+The vectors use well-known synthetic scalars 1 and 2, never runtime wallets.
+Production signer, payment verification and worker dependencies remain separate.
