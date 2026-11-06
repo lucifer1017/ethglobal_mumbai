@@ -1,0 +1,5 @@
+
+> check:runtime
+> node scripts/check-runtime.mjs
+
+Node 24.22.2: runtime check passed

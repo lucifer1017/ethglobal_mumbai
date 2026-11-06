@@ -1,0 +1,23 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Meter requires Node 24; select the version in .nvmrc
+
+25 !== 24
+
+    at file://<checkout>/scripts/check-runtime.mjs:3:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:413:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:654:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 25,
+  expected: 24,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v25.2.1
+
+Exit code: 1
