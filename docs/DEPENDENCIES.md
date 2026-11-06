@@ -22,3 +22,14 @@ its compiler metadata. No application contract or deployment is introduced.
 
 Application packages will arrive in separate checked integrations. This is not
 completion of S-07 or Phase 1.
+
+## Backend SDK part
+
+The isolated marketplace-copy helper uses `@anthropic-ai/sdk ^1.6.0` and
+`pino ^10.4.0`. Its development tools are TypeScript `~5.9.3`, `@types/node ^24`,
+`tsx ^4.23.15` and `vitest ^5.1.0`. Its lockfile is generated from only these
+requirements; route, database, chain and indexer packages are not imported.
+
+The helper uses `claude-haiku-5-5`, low effort and 1024 output tokens. API access
+is explicitly passed by the caller, so no-key operation and tests need no env
+or funded signer. All tests mock fetch; live model access is not verified here.

@@ -26,3 +26,18 @@ npm run check:contracts
 
 This installs pinned libraries and compiles/tests a temporary probe with solc
 0.8.30 and Prague. It sends no chain transaction and deploys no product contract.
+
+## Backend SDK helper
+
+The first backend integration contains only the marketplace-copy helper, not an
+API server. It accepts an optional API key and falls back deterministically when
+no key is provided or the model response is unusable.
+
+```sh
+npm --prefix backend ci
+npm --prefix backend run typecheck
+npm --prefix backend test
+```
+
+Tests exercise SDK serialization and fallback cases with mocked fetch; no paid
+model call, wallet, chain transaction or deployment is made.
