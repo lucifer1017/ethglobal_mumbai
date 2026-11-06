@@ -59,3 +59,10 @@ types `@types/pg ^8.23.1`. PostgreSQL `16-alpine` supplies disposable local and 
 databases. Existing package versions remain unchanged. Only synthetic test SQL
 is used; application schemas, migration files and process database wiring are
 outside this integration.
+
+## Egress guard component (I-3)
+
+The standalone IP-pinned HTTP helper adds `undici ^8.12.4` and `ipaddr.js ^2.5.0`.
+Node 24 satisfies undici's runtime requirement. Existing versions stay unchanged.
+Tests mock DNS and use a local HTTP fixture; public HTTPS is an explicit opt-in
+check. No API, creator, paid invocation or x402 consumer is introduced here.

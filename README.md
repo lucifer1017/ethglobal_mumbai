@@ -66,3 +66,12 @@ PostgreSQL 16 container, runs the entire minimal backend suite including four
 runner integration tests, and removes the container. No application database or
 application SQL is involved. Without `METER_TEST_DATABASE_URL`, ordinary backend
 tests skip the DB suite; the launcher and CI always supply a disposable DB.
+
+## Agent endpoint guard
+
+The standalone `safeFetch` helper validates public HTTPS endpoints, pins the
+vetted DNS address, rejects redirects and bounds response time and JSON body
+size. Offline tests use a local server; an exact `EGRESS_DEV_ALLOW` origin is
+accepted only outside production. Run `METER_EGRESS_LIVE_TEST=1 npm run check:migration-runner` to include the optional
+public HTTPS test. Registration
+and paid invocation consumers will be integrated separately.
