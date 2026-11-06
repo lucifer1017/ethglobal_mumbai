@@ -84,3 +84,11 @@ synthetic vectors have a reference test. Regenerate them with
 `node scripts/generate-dispatch-vectors.mjs` after installing backend dependencies.
 This interface does not implement payment verification, durable replay protection
 or a production signer.
+
+## Chain schema component
+
+The standalone [chain primitives SQL](backend/src/db/schema/chain-primitives.sql)
+defines exact base-unit domains, token identity and per-chain cursors. Disposable
+PostgreSQL tests exercise it in an isolated schema. It is not an application boot
+migration; [schema history reconciliation](docs/interfaces/schema-components.md)
+explains how it relates to the separate development checkout.

@@ -1,0 +1,19 @@
+
+> check:migration-runner
+> node scripts/check-migration-runner.mjs
+
+
+> meter-backend@0.1.0 test
+> vitest run
+
+
+ RUN  v5.1.0 <checkout>/backend
+
+
+ Test Files  8 passed (8)
+      Tests  77 passed | 1 skipped (78)
+   Start at  04:17:59
+   Duration  14.73s (import 73%, tests 25%, transform 2%, worker 1%)
+
+    Isolate  8 workers spawned · ~5.84s startup each (spawn + environment, per file)
+             at least ~834ms faster with isolate: false — reuses workers across files instead of one per file
