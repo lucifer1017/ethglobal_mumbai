@@ -51,3 +51,10 @@ the executor to Ethereum Sepolia; invalid keys produce sanitized errors.
 
 The backend tests cover these components without network calls or funded keys.
 Application process wiring and live deployment manifests are not included yet.
+
+## Runtime configuration component
+
+`createConfig(env)` loads public settings without requiring funded keys or live
+deployments. Contract addresses and the indexer start block are read lazily from
+the selected chain's manifest. See the [manifest schema](docs/interfaces/deployment-manifest.md).
+This component is not an API server or complete process integration.

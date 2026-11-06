@@ -43,3 +43,11 @@ unchanged. Networks come from viem's `whitechainSepolia` (1874) and `sepolia`
 
 No legacy API/config/indexer, DB driver or worker dependency is part of this
 integration. Runtime process wiring and live deployment manifests remain separate.
+
+## Runtime config part
+
+The lazy runtime configuration adds `dotenv ^16.6.1`; other backend versions
+remain unchanged. It selects chain-specific metadata and deployment manifests
+without loading funded signers at import. The deployment file format is in
+[the manifest schema](interfaces/deployment-manifest.md). No deployed addresses,
+DB driver, Express app, worker or indexer is added in this part.
