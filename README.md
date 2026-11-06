@@ -3,7 +3,7 @@
 A marketplace for paid AI agents, being integrated for Whitechain Sepolia
 payments and Uniswap DCA execution on Ethereum Sepolia.
 
-Implementation is arriving in small, tested pull requests. This repository does
+Implementation is arriving in small, tested integrations on main. This repository does
 not yet contain a runnable application or deployed contracts. Earlier Daemon
 source is retained separately; it is not bulk-imported into this history.
 
@@ -58,3 +58,11 @@ Application process wiring and live deployment manifests are not included yet.
 deployments. Contract addresses and the indexer start block are read lazily from
 the selected chain's manifest. See the [manifest schema](docs/interfaces/deployment-manifest.md).
 This component is not an API server or complete process integration.
+
+## Isolated migration runner
+
+Run `npm run check:migration-runner` with Docker available. It creates a temporary
+PostgreSQL 16 container, runs the entire minimal backend suite including four
+runner integration tests, and removes the container. No application database or
+application SQL is involved. Without `METER_TEST_DATABASE_URL`, ordinary backend
+tests skip the DB suite; the launcher and CI always supply a disposable DB.

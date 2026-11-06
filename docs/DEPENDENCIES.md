@@ -51,3 +51,11 @@ remain unchanged. It selects chain-specific metadata and deployment manifests
 without loading funded signers at import. The deployment file format is in
 [the manifest schema](interfaces/deployment-manifest.md). No deployed addresses,
 DB driver, Express app, worker or indexer is added in this part.
+
+## Migration runner part
+
+The standalone numbered-migration runner adds `pg ^8.23.1` and development
+types `@types/pg ^8.23.1`. PostgreSQL `16-alpine` supplies disposable local and CI
+databases. Existing package versions remain unchanged. Only synthetic test SQL
+is used; application schemas, migration files and process database wiring are
+outside this integration.
