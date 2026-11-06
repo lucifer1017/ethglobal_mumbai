@@ -41,3 +41,13 @@ npm --prefix backend test
 
 Tests exercise SDK serialization and fallback cases with mocked fetch; no paid
 model call, wallet, chain transaction or deployment is made.
+
+## Chain components
+
+The backend package also exports the two-chain registry, manifest validation,
+keyless public-client builder and explicit role-based signing builders. Public
+reads do not access signing keys. The relayer is fixed to Whitechain Sepolia and
+the executor to Ethereum Sepolia; invalid keys produce sanitized errors.
+
+The backend tests cover these components without network calls or funded keys.
+Application process wiring and live deployment manifests are not included yet.

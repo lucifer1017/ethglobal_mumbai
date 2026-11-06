@@ -1,0 +1,18 @@
+
+> meter-backend@0.1.0 test
+> vitest run
+
+
+ RUN  v5.1.0 <checkout>/backend
+
+ ✓ test/summarize.test.ts (8 tests) 43ms
+ ✓ test/manifest.test.ts (8 tests) 10ms
+ ✓ test/chain-registry.test.ts (14 tests) 41ms
+
+ Test Files  3 passed (3)
+      Tests  30 passed (30)
+   Start at  03:30:13
+   Duration  797ms (import 78%, transform 13%, tests 7%, worker 1%)
+
+
+Exit code: 0

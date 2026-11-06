@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.6.0",
-    "pino": "^10.4.0"
+    "pino": "^10.4.0",
+    "viem": "^2.57.16"
   },
   "devDependencies": {
     "@types/node": "^24",

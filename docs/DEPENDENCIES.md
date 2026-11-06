@@ -33,3 +33,13 @@ requirements; route, database, chain and indexer packages are not imported.
 The helper uses `claude-haiku-5-5`, low effort and 1024 output tokens. API access
 is explicitly passed by the caller, so no-key operation and tests need no env
 or funded signer. All tests mock fetch; live model access is not verified here.
+
+## Chain component part
+
+The isolated chain registry, manifest parser and client builders add
+`viem ^2.57.16` to the minimal backend package. Other backend versions remain
+unchanged. Networks come from viem's `whitechainSepolia` (1874) and `sepolia`
+(11155111) definitions; unsupported IDs fail rather than inventing a chain.
+
+No legacy API/config/indexer, DB driver or worker dependency is part of this
+integration. Runtime process wiring and live deployment manifests remain separate.
