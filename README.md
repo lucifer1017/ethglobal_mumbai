@@ -15,3 +15,14 @@ Select Node 24 (`nvm use` with the supplied `.nvmrc`), then run:
 npm ci
 npm run check:runtime
 ```
+
+## Contract toolchain check
+
+Install Foundry 1.9.0, select Node 24, then run:
+
+```sh
+npm run check:contracts
+```
+
+This installs pinned libraries and compiles/tests a temporary probe with solc
+0.8.30 and Prague. It sends no chain transaction and deploys no product contract.

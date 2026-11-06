@@ -1,0 +1,28 @@
+
+> check:contracts
+> node scripts/check-contract-toolchain.mjs
+
+Installing openzeppelin-contracts in <checkout>/contracts/lib/openzeppelin-contracts (url: https://github.com/OpenZeppelin/openzeppelin-contracts, tag: v5.6.1)
+Cloning into '<checkout>/contracts/lib/openzeppelin-contracts'...
+Submodule 'lib/erc4626-tests' (https://github.com/a16z/erc4626-tests.git) registered for path 'lib/erc4626-tests'
+Submodule 'lib/forge-std' (https://github.com/foundry-rs/forge-std) registered for path 'lib/forge-std'
+Submodule 'lib/halmos-cheatcodes' (https://github.com/a16z/halmos-cheatcodes) registered for path 'lib/halmos-cheatcodes'
+Cloning into '<checkout>/contracts/lib/openzeppelin-contracts/lib/erc4626-tests'...
+Cloning into '<checkout>/contracts/lib/openzeppelin-contracts/lib/forge-std'...
+Cloning into '<checkout>/contracts/lib/openzeppelin-contracts/lib/halmos-cheatcodes'...
+    Installed openzeppelin-contracts v5.6.1
+Installing forge-std in <checkout>/contracts/lib/forge-std (url: https://github.com/foundry-rs/forge-std, tag: v1.17.0)
+Cloning into '<checkout>/contracts/lib/forge-std'...
+    Installed forge-std v1.17.0
+openzeppelin-contracts 5.6.1
+forge-std 1.17.0
+Compiling 23 files with Solc 0.8.30
+Solc 0.8.30 finished in 1.07s
+Compiler run successful!
+
+Ran 1 test for test/Probe.t.sol:ProbeTest
+[PASS] test_constructorRecordsOwner() (gas: 349998)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 17.71ms (7.55ms CPU time)
+
+Ran 1 test suite in 23.94ms (17.71ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
+PASS: OpenZeppelin/forge-std probe; solc 0.8.30; compiled metadata uses Prague.

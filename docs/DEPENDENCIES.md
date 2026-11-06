@@ -10,5 +10,15 @@ CI actions are pinned to their published release commits:
 | actions/checkout | v7.0.1 | 3d3c42e5aac5ba805825da76410c181273ba90b1 |
 | actions/setup-node | v7.1.0 | 949feb2413d6458794dcd2491c4babbbce0c15c1 |
 
-Application packages, Solidity tooling and their version constraints will arrive
-in separate checked integrations. This is not completion of S-07 or Phase 1.
+The contract toolchain part of S-07 pins Foundry 1.9.0, solc 0.8.30, EVM Prague
+and via-IR compilation. Library tags are OpenZeppelin v5.6.1 and forge-std v1.17.0;
+`scripts/install-contract-deps.sh` installs them without creating commits or
+submodules, and rejects a different installed package version.
+
+CI installs Foundry with the official foundry-rs/foundry-toolchain v1 action,
+pinned to dba66c27052e63476d886f22216e119ba7e615bf, and selects v1.9.0 explicitly.
+The check compiles and tests a temporary probe against both libraries and reads
+its compiler metadata. No application contract or deployment is introduced.
+
+Application packages will arrive in separate checked integrations. This is not
+completion of S-07 or Phase 1.

@@ -5,6 +5,7 @@
     "node": ">=24 <25"
   },
   "scripts": {
-    "check:runtime": "node scripts/check-runtime.mjs"
+    "check:runtime": "node scripts/check-runtime.mjs",
+    "check:contracts": "node scripts/check-contract-toolchain.mjs"
   }
 }
