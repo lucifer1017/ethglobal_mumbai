@@ -99,3 +99,6 @@ explains how it relates to the separate development checkout.
 checks the deployed router/quoter, token decimals and nonzero USDC-to-WETH quote.
 [Recorded RPC evidence](docs/evidence/U-01/network-check.json) is a simulation,
 not an executed swap. Recurring settlement remains under development.
+
+[Partner integration guide](docs/INTEGRATIONS.md): source pointers, reproducible
+read-only checks, and the current boundaries of the Whitechain/Uniswap integrations.
