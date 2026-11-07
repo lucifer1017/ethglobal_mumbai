@@ -55,5 +55,7 @@ jobs:
         working-directory: backend
       - run: npm run typecheck
         working-directory: backend
+      - run: npx tsc --noEmit --strict --target ES2022 --module NodeNext --moduleResolution NodeNext --skipLibCheck scripts/check-uniswap-network.ts
+        working-directory: backend
       - run: npm test
         working-directory: backend

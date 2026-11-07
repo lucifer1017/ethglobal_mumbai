@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-11-07T02:08:37.555Z",
+  "verification": "RPC simulation only; no swap or transaction",
+  "chainId": 11155111,
+  "blockNumber": "12080604",
+  "router": "0x3bFA4769FB09eefC5a80d6E87c3B9C650f7Ae48E",
+  "quoter": "0xEd1f6473345F45b75F8179591dd5bA1888cf2FB3",
+  "tokenIn": "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238",
+  "tokenOut": "0xfff9976782d46cc05630d1f6ebab18b2324d6b14",
+  "input_base": "1000000",
+  "output_base": "39001868618547",
+  "fee": 500,
+  "decimals": [
+    6,
+    18
+  ],
+  "balances": {}
+}

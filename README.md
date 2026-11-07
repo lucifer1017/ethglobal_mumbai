@@ -92,3 +92,10 @@ defines exact base-unit domains, token identity and per-chain cursors. Disposabl
 PostgreSQL tests exercise it in an isolated schema. It is not an application boot
 migration; [schema history reconciliation](docs/interfaces/schema-components.md)
 explains how it relates to the separate development checkout.
+
+## Uniswap integration proof
+
+[Sepolia QuoterV2 simulation](backend/scripts/check-uniswap-network.ts#L23-L26)
+checks the deployed router/quoter, token decimals and nonzero USDC-to-WETH quote.
+[Recorded RPC evidence](docs/evidence/U-01/network-check.json) is a simulation,
+not an executed swap. Recurring settlement remains under development.
